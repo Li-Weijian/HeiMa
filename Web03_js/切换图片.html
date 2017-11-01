@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+
+    <script >
+
+        function Init() {
+//            setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
+            setInterval("changImg()", 2000);
+        }
+        
+        var count = 0;
+        function changImg() {
+            count++;
+            <!--将需要操作的便签绑定一个id-->
+            document.getElementById("img").src = "img/small0"+count+".jpg";
+            if(count === 3){
+                count = 0;
+            }
+        }
+    </script>
+
+
+
+    <!--1.设置显示广告定时器-->
+    <!--2.显示广告-->
+    <!--3.清除显示广告定时器-->
+    <!--4.设置隐藏广告定时器-->
+    <!--5.隐藏广告-->
+    <!--6.清除隐藏广告定时器-->
+    <!--设置onload()函数，页面加载时自动调用Init()函数-->
+</head>
+<body onload="Init()">
+    <div>
+        <img src="img/ad.jpg" style="display: none"/>
+        <img src="img/small01.jpg" id="img">
+    </div>
+</body>
+</html>
