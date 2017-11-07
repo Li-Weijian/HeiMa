@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+
+    <script >
+
+        function Init() {
+           time =  setInterval("showAd()", 3000);
+        }
+        
+        function showAd() {
+            var ad = document.getElementById("ad");
+            ad.style.display = "block";
+            clearInterval(time);
+            time = setInterval("hiddedAd()", 3000);
+        }
+
+        function hiddedAd() {
+            document.getElementById("ad").style.display = "none";
+            clearInterval(time);
+
+        }
+
+    </script>
+
+    <!--1.设置显示广告定时器-->
+    <!--2.显示广告-->
+    <!--3.清除显示广告定时器-->
+    <!--4.设置隐藏广告定时器-->
+    <!--5.隐藏广告-->
+    <!--6.清除隐藏广告定时器-->
+    <!--设置onload()函数，页面加载时自动调用Init()函数-->
+</head>
+<body onload="Init()">
+<div>
+    <img src="img/ad.jpg" style="display: none" id="ad"/>
+    <img src="img/small01.jpg" id="img">
+</div>
+</body>
+</html>

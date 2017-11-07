@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validata入门</title>
+    <script src="../js/jquery-1.8.3.js"></script>
+    <!--因为validata是建立在JQuery的基础上，所以需要先导入jquery包-->
+    <script src="../js/jquery.validate.min.js"></script>
+    <!--引入国际化js文件-->
+    <script src="../js/messages_zh.js"></script>
+
+    <script>
+        $(function () {
+            //1.获取需要校验的表单
+            $("#checkForm").validate({
+                //2.填写校验规则
+                rules:{
+                    //3.字段名：校验器
+                    //字段名即标签的name属性,校验器是validata内置的
+                    username:{
+                        required:true,
+                        minlength:6
+                    },
+                    password:{
+                        required:true,
+                        minlength:6
+                    }
+                },
+                //填写提示信息，把rules的复制下来，修改就行
+                messages:{
+                    username:{
+                        required:"用户名不能为空！",
+                        minlength:"用户名不得少于6位"
+                    },
+                    password:{
+                        required:"密码不能为空！",
+                        minlength:"密码不得小于6位"
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="checkForm">
+        用户名：<input type="text" name="username"><br/>
+        密码:<input type="password" name="password"><br/>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
