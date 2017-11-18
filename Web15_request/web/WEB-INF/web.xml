@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>LineServlet</servlet-name>
+        <servlet-class>com.liweijian.requset.line.LineServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HeaderServlet</servlet-name>
+        <servlet-class>com.liweijian.requset.header.HeaderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ContentServlet</servlet-name>
+        <servlet-class>com.liweijian.requset.content.ContentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>com.liweijian.requset.forward.Servlet1</servlet-class>
+    </servlet>
+   <servlet>
+        <servlet-name>Servlet2</servlet-name>
+        <servlet-class>com.liweijian.requset.forward.Servlet2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.liweijian.requset.Register.RegisterServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContentServlet</servlet-name>
+        <url-pattern>/content</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HeaderServlet</servlet-name>
+        <url-pattern>/header</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LineServlet</servlet-name>
+        <url-pattern>/line</url-pattern>
+    </servlet-mapping>
+
+</web-app>
