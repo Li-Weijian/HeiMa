@@ -31,9 +31,33 @@
         <servlet-name>ByteServlet</servlet-name>
         <servlet-class>com.liweijian.content.ByteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>com.liweijian.content.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DownloadServlet2</servlet-name>
+        <servlet-class>com.liweijian.content.DownloadServlet2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CheckImgServlet</servlet-name>
+        <servlet-class>com.liweijian.checkImg.CheckImgServlet</servlet-class>
+    </servlet>
 
-    
-    
+
+
+    <servlet-mapping>
+        <servlet-name>CheckImgServlet</servlet-name>
+        <url-pattern>/checkImg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet2</servlet-name>
+        <url-pattern>/download2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ByteServlet</servlet-name>
         <url-pattern>/byte</url-pattern>

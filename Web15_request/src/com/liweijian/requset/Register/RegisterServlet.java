@@ -73,6 +73,9 @@ public class RegisterServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        //重定向至登录页面
+        response.sendRedirect(request.getContextPath()+"/login.jsp");
+
     }
 
     //注册方法
