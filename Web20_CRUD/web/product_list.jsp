@@ -40,9 +40,9 @@ body {
 			</ol>
 		</div>
 
-		<c:forEach items="${productList}" var="product">
+		<c:forEach items="${pageBean.productList}" var="product">
 			<div class="col-md-2" style="height: 250px;" >
-				<a href="product_info.htm"> <img src="${product.pimage}" width="170" height="170" style="display: inline-block;">
+				<a href="product_info.htm"> <img src="${pageContext.request.contextPath}/${product.pimage}" width="170" height="170" style="display: inline-block;">
 				</a>
 				<p>
 					<a href="product_info.html" style='color: green'>${product.pname}</a>
@@ -57,22 +57,56 @@ body {
 	<!--分页 -->
 	<div style="width: 380px; margin: 0 auto; margin-top: 50px;">
 		<ul class="pagination" style="text-align: center; margin-top: 10px;">
-			<li class="disabled"><a href="#" aria-label="Previous"><span
-					aria-hidden="true">&laquo;</span></a></li>
-			<li class="active"><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">6</a></li>
-			<li><a href="#">7</a></li>
-			<li><a href="#">8</a></li>
-			<li><a href="#">9</a></li>
-			<li><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-			</a></li>
+
+			<%--当前页是否为第一页--%>
+			<c:if test="${pageBean.cueerntPage == 1}">
+				<li class="disabled">
+					<a href="javascript:void(0);" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+			</c:if>
+			<c:if test="${pageBean.cueerntPage != 1}">
+				<li><a href="${pageContext.request.contextPath}/productList?cueerntPage=${pageBean.cueerntPage-1}" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span></a></li>
+			</c:if>
+				
+			<%--数字页--%>
+			<c:forEach begin="1" end="${pageBean.totalPage}" var="page">
+				<%--是当前页：显示active样式--%>
+				<c:if test="${pageBean.cueerntPage == page}">
+					<li class="active"><a href="${pageContext.request.contextPath}/productList?cueerntPage=${page}">${page}</a></li>
+				</c:if>
+				<%--不是当前页：不显示active样式--%>
+				<c:if test="${pageBean.cueerntPage != page}">
+					<li><a href="${pageContext.request.contextPath}/productList?cueerntPage=${page}">${page}</a></li>
+				</c:if>
+			</c:forEach>
+
+			<%--当前页是否为最后一页--%>
+			<c:if test="${pageBean.cueerntPage == pageBean.totalPage}">
+				<li class="disabled"><a href="javascript:void(0);" aria-label="Next"> <span aria-hidden="true">&raquo;</span></a></li>
+			</c:if>
+			<c:if test="${pageBean.cueerntPage != pageBean.totalPage}">
+				<li><a href="${pageContext.request.contextPath}/productList?cueerntPage=${pageBean.cueerntPage+1}" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span></a></li>
+			</c:if>
 		</ul>
 	</div>
 	<!-- 分页结束 -->
+<%--
+	<li class="disabled"><a href="#" aria-label="Previous"><span
+			aria-hidden="true">&laquo;</span></a></li>
+	<li class="active"><a href="#">1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">4</a></li>
+	<li><a href="#">5</a></li>
+	<li><a href="#">6</a></li>
+	<li><a href="#">7</a></li>
+	<li><a href="#">8</a></li>
+	<li><a href="#">9</a></li>
+	<li><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span>--%>
 
 	<!--商品浏览记录-->
 	<div

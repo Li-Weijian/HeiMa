@@ -30,6 +30,34 @@ font {
 }
 </style>
 </head>
+
+<script type="text/javascript">
+    $(function () {
+        //1.绑定事件
+       $("#username").blur(function () {
+           //2.获取表单参数
+           var username = $("#username").val();
+           //3.使用ajax向服务器传递参数
+           $.post(
+               "${pageContext.request.contextPath}/checkUsername",  //url
+               {"username":username},       //传递的参数
+               function (data) {        //成功的回调函数
+                   var isExist = "";
+                   if (data.isExist == true){
+                        isExist = "用户名已存在";
+                        $("#usernameInfo").css("color","red");
+                   }else {
+                       isExist = "用户名可用";
+                       $("#usernameInfo").css("color","green");
+                    }
+                    $("#usernameInfo").html(isExist);
+               },
+               "json"       //返回的数据格式
+           );
+       });
+    });
+
+</script>
 <body>
 
 	<!-- 引入header.jsp -->
@@ -47,7 +75,7 @@ font {
 						<label for="username" class="col-sm-2 control-label">用户名</label>
 						<div class="col-sm-6">
 							<input type="text" class="form-control" id="username"
-								placeholder="请输入用户名">
+								placeholder="请输入用户名"><span id="usernameInfo"></span>
 						</div>
 					</div>
 					<div class="form-group">

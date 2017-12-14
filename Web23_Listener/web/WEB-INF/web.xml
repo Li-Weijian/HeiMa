@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+    
+    <!--<listener>
+        <listener-class>com.liweijian.listener.MyServletContextListener</listener-class>
+    </listener>-->
+
+    
+    <listener>
+        <listener-class>com.liweijian.listener.MyServletContextAttributeListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>TestMyServletContextAttributeListenerServlet</servlet-name>
+        <servlet-class>com.liweijian.web.TestMyServletContextAttributeListenerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TestHttpSessionBindingServlet</servlet-name>
+        <servlet-class>com.liweijian.web.TestHttpSessionBindingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TestSessionActivationServlet</servlet-name>
+        <servlet-class>com.liweijian.web.TestSessionActivationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TestSessionActivationServlet2</servlet-name>
+        <servlet-class>com.liweijian.web.TestSessionActivationServlet2</servlet-class>
+    </servlet>
+    
+    
+    <servlet-mapping>
+        <servlet-name>TestSessionActivationServlet2</servlet-name>
+        <url-pattern>/testActivation2</url-pattern>
+    </servlet-mapping>s
+    <servlet-mapping>
+        <servlet-name>TestSessionActivationServlet</servlet-name>
+        <url-pattern>/testActivation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestHttpSessionBindingServlet</servlet-name>
+        <url-pattern>/testBinding</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestMyServletContextAttributeListenerServlet</servlet-name>
+        <url-pattern>/test1</url-pattern>
+    </servlet-mapping>
+</web-app>

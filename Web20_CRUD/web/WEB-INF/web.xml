@@ -39,9 +39,25 @@
         <servlet-name>ProductListServlet</servlet-name>
         <servlet-class>com.liweijian.web.ProductListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CheckUsernameServlet</servlet-name>
+        <servlet-class>com.liweijian.web.CheckUsernameServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchWordServlet</servlet-name>
+        <servlet-class>com.liweijian.web.SearchWordServlet</servlet-class>
+    </servlet>
     
     
     
+    <servlet-mapping>
+        <servlet-name>SearchWordServlet</servlet-name>
+        <url-pattern>/searchWord</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckUsernameServlet</servlet-name>
+        <url-pattern>/checkUsername</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ProductListServlet</servlet-name>
         <url-pattern>/productList</url-pattern>

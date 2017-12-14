@@ -42,11 +42,58 @@
 					<li><a href="#">电脑办公</a></li>
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
+					<div class="form-group" style="position: relative">
+						<input type="text" class="form-control" placeholder="Search" onkeyup="searchWord(this)" id="search"/>
+                        <div id="showDiv" style="display: none; background: #fff; position: absolute; z-index:1000;width: 200px; border: 1px solid #ccc">
+
+                        </div>
 					</div>
 					<button type="submit" class="btn btn-default">Submit</button>
+
 				</form>
+
+                <script type="text/javascript">
+                    
+                    //鼠标进入商品名称时
+                    function overFn(obj) {
+                        $(obj).css("background","#DBEAF9");
+                    }
+                    //鼠标移出商品名称时
+                    function outFn(obj) {
+                        $(obj).css("background","#fff");
+                    }
+                    //鼠标点击商品名称时，将该名称显示在搜索框中
+                    function clickFn(obj) {
+                        $("#search").val($(obj).html());
+                        $("#showDiv").css("display","none");
+
+                    }
+            
+                    //查找商品方法 -- 当键盘松起时
+                    function searchWord(obj) {
+                        //1.获得输入框的内容
+                        var word = $(obj).val();
+                        //2.将获得的内容发送到服务器数据库进行模糊查询 -- 使用ajax
+                        $.post(
+                            "${pageContext.request.contextPath}/searchWord",
+                            {"word":word},
+                            function (data) {
+                                //data = [{xiaomi},{huawei},....]
+                                var content = "";
+                                //有数据返回时，拼接字符串并显示
+                                if (data.length > 0){
+                                    for(var i = 0; i < data.length; i++){
+                                        content += "<div style='padding: 5px; cursor: pointer' onmouseover='overFn(this)' onmouseout='outFn(this)' onclick='clickFn(this)'>"+data[i]+"</div>";        //拼接字符串
+                                    }
+                                    $("#showDiv").html(content);
+                                    $("#showDiv").css("display","block");
+                                }
+                            },
+                            "json"
+                        );
+                    }
+                </script>
+
 			</div>
 		</div>
 	</nav>

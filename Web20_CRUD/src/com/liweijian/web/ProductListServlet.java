@@ -30,8 +30,9 @@ public class ProductListServlet extends HttpServlet {
         PageBean pageBean = new PageBean();   /*封装一个对象，存储需要向页面传递的数据*/
 
 
-        //模拟前台传递的数据
-        int cueerntPage = 1;
+        String cueerntPageStr = request.getParameter("cueerntPage");
+        if (cueerntPageStr == null) cueerntPageStr = "1";       //默认第一页
+        int cueerntPage = Integer.parseInt(cueerntPageStr);
         int cueerntCount = 12;
 
         try {
