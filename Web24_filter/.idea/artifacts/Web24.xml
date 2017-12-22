@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Web24">
+    <output-path>$PROJECT_DIR$/../../服务器发布程序</output-path>
+    <root id="archive" name="Web24.war">
+      <element id="javaee-facet-resources" facet="Web24_filter/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Web24_filter" />
+        </element>
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="servlet-api">
+    <archive path="D:/java/workspace/Web17_jsp/web/WEB-INF/lib/servlet-api.jar" />
+  </library>
+</eclipse-userlibraries>
+

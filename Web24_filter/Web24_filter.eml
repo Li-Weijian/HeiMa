@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/Web24_filter"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="servlet-api.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar!/"/>
+	</lib>
+	<lib name="jstl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar!/"/>
+	</lib>
+	<lib name="standard.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/standard.jar!/"/>
+	</lib>
+	<lib name="c3p0-0.9.1.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/c3p0-0.9.1.2.jar!/"/>
+	</lib>
+	<lib name="mysql-connector-java-5.0.4-bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.0.4-bin.jar!/"/>
+	</lib>
+	<lib name="commons-dbutils-1.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbutils-1.4.jar!/"/>
+	</lib>
+</component>
