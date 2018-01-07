@@ -23,6 +23,6 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!--Hibernate加载映射-->
-        <!--<mapping resource="com/liweijian/domain/Customer.hbm.xml"/>-->
+        <mapping resource="com/liweijian/domain/Customer.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
