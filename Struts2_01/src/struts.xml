@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!--启用开发模式：建议在开发模式下开启，项目上线时关闭
+        1.热加载主配置.(不需要重启即可生效)
+		2.提供更多错误信息输出,方便开发时的调试
+    -->
+    <constant name="struts.devMode" value="true"></constant>
+
+    <!--指定访问struts2的后缀名
+        默认： struts.action.extension=action,,       空或者action(，，不是多余的)
+    -->
+    <!--<constant name="struts.action.extension" value=".do"></constant>-->
+
+    <package name="hello" namespace="/hello" extends="struts-default">
+        <action name="HelloAction" class="com.liweijian.hello.HelloAction" method="hello">
+            <result name="abc">/hello.jsp</result>
+        </action>
+    </package>
+</struts>
