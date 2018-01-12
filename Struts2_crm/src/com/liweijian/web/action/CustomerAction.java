@@ -4,6 +4,7 @@ import com.liweijian.domain.Customer;
 import com.liweijian.service.CustomerService;
 import com.liweijian.service.impl.CustomerServiceImpl;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.criterion.DetachedCriteria;
@@ -16,9 +17,10 @@ import java.util.List;
  * @Description:
  * @Date:Create in 23:23 2018/1/11 0011
  */
-public class CustomerAction extends ActionSupport {
+public class CustomerAction extends ActionSupport implements ModelDriven<Customer>{
 
     private CustomerService service = new CustomerServiceImpl();
+    private Customer customer = new Customer();
 
     public String list() throws Exception{
 
@@ -38,6 +40,15 @@ public class CustomerAction extends ActionSupport {
         return "list";
     }
 
+    //添加客户
+    public String add(){
+        service.addCustomer(customer);
+        return "toList";
+    }
 
 
+    @Override
+    public Customer getModel() {
+        return customer;
+    }
 }

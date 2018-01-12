@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+
+    <package name="test" namespace="/" extends="struts-default">
+        <action name="TestAction" class="com.liweijian.test.TestAction" method="execute">
+
+            <!--
+                Struts2中默认的结果处理方式是dispatcher(转发)
+                结果处理的类型可以在struts2核心包的struts-default.xml中找到
+                常用的还有以下三种:
+                        chain :转发到Action
+                        redirect :重定向到页面
+                        redirectAction :重定向到Action
+            -->
+            <!--转发到页面-->
+            <result name="success" type="dispatcher">/index.jsp</result>
+
+            <!--转发到Action-->
+           <!-- <result name="success" type="chain">
+                &lt;!&ndash;Action的名字&ndash;&gt;
+                <param name="actionName">Test2Action</param>
+                &lt;!&ndash;Action的命名空间&ndash;&gt;
+                <param name="namespace">/</param>
+            </result>-->
+
+            <!--重定向到页面-->
+            <!--<result name="success" type="redirect">/index.jsp</result>-->
+
+            <!--重定向到Action-->
+           <!-- <result name="success" type="redirectAction">
+                &lt;!&ndash;Action的名字&ndash;&gt;
+                <param name="actionName">Test2Action</param>
+                &lt;!&ndash;Action的命名空间&ndash;&gt;
+                <param name="namespace">/</param>
+            </result>-->
+        </action>
+
+        <action name="Test2Action" class="com.liweijian.test.Test2Action" method="execute">
+            <result name="success">/index.jsp</result>
+        </action>
+    </package>
+</struts>
