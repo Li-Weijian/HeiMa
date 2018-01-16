@@ -3,8 +3,11 @@ package com.liweijian.web.action;
 import com.liweijian.domain.Customer;
 import com.liweijian.service.CustomerService;
 import com.liweijian.service.impl.CustomerServiceImpl;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import ognl.Ognl;
+import ognl.OgnlContext;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.criterion.DetachedCriteria;
@@ -35,8 +38,8 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         //4.传递离线查询
         List<Customer> list = service.customerList(dc);
         //5.设置参数
-        ServletActionContext.getRequest().setAttribute("list",list);
-
+      //ServletActionContext.getRequest().setAttribute("list",list);
+        ActionContext.getContext().put("list",list);
         return "list";
     }
 

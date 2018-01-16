@@ -9,12 +9,22 @@
     <constant name="struts.devMode" value="true"></constant>
 
     <package name="crm" namespace="/" extends="struts-default">
+
+        <!--定义异常处理-->
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.RuntimeException" result="error"/>
+        </global-exception-mappings>
+
         <action name="CustomerAction_*" class="com.liweijian.web.action.CustomerAction" method="{1}">
             <result name="list">/jsp/customer/list.jsp</result>
             <result name="toList" type="redirectAction">
                 <param name="actionName">CustomerAction_list</param>
                 <param name="namespace">/</param>
             </result>
+        </action>
+        <action name="UserAction_*" class="com.liweijian.web.action.UserAction" method="{1}">
+            <result name="toIndex" type="redirect">/index.htm</result>
+            <result name="error">/login.jsp</result>
         </action>
     </package>
 </struts>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+
+    <package name="MyIner" namespace="/" extends="struts-default">
+        <!--拦截器配置-->
+        <interceptors>
+            <!--1.注册拦截器-->
+            <interceptor name="myInter" class="com.liweijian.test.interceptor.MyInterceptor">
+                <!--指定不拦截方法-->
+                <!--<param name="excludeMethods"></param>-->
+
+                <!--指定拦截方法-->
+                <param name="includeMethods">add,delete</param>
+            </interceptor>
+
+            <!--2.注册拦截器栈-->
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="myInter"></interceptor-ref>
+                <!--引用默认的拦截器（20个）-->
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        
+        <!--3.设置默认拦截器-->
+        <default-interceptor-ref name="myStack"></default-interceptor-ref>
+
+        <action name="Test1Action_*" class="com.liweijian.test.action.Test1Action" method="{1}">
+            <result name="success">/index.jsp</result>
+        </action>
+    </package>
+
+
+
+</struts>

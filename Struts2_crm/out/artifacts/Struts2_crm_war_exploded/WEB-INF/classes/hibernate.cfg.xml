@@ -6,7 +6,7 @@
     <session-factory>
         <!--必要的配置信息，连接数据库的参数-->
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql:///crm</property>
+        <property name="hibernate.connection.url">jdbc:mysql:///hibernate_day01</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">qq352642663</property>
 
@@ -28,5 +28,6 @@
         <!--Hibernate加载映射-->
         <mapping resource="com/liweijian/domain/Customer.hbm.xml"/>
         <mapping resource="com/liweijian/domain/Linkman.hbm.xml"/>
+        <mapping resource="com/liweijian/domain/User.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
