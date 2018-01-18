@@ -21,8 +21,8 @@ import java.util.List;
  */
 public class LinkmanServiceImpl implements LinkmanService {
 
-    private LinkmanDao dao = new LinkmanDaoImpl();
-    private CustomerDao cust_dao = new CustomerDaoImpl();
+    private LinkmanDao dao;
+    private CustomerDao cust_dao;
 
 
     //添加联系人
@@ -72,5 +72,21 @@ public class LinkmanServiceImpl implements LinkmanService {
         }
 
         return linkmanList;
+    }
+
+    public LinkmanDao getDao() {
+        return dao;
+    }
+
+    public void setDao(LinkmanDao dao) {
+        this.dao = dao;
+    }
+
+    public CustomerDao getCust_dao() {
+        return cust_dao;
+    }
+
+    public void setCust_dao(CustomerDao cust_dao) {
+        this.cust_dao = cust_dao;
     }
 }

@@ -14,7 +14,7 @@ import org.hibernate.Transaction;
  * @Date:Create in 22:40 2018/1/16 0016
  */
 public class UserServiceImpl implements UserService {
-    private UserDao userDao = new UserDaoImpl();
+    private UserDao userDao;
 
     @Override
     public User login(User user) {
@@ -40,5 +40,14 @@ public class UserServiceImpl implements UserService {
             }
 
         }
+    }
+
+
+    public UserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
     }
 }

@@ -12,7 +12,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 /**
@@ -22,10 +25,18 @@ import java.util.List;
  */
 public class CustomerAction extends ActionSupport implements ModelDriven<Customer>{
 
-    private CustomerService service = new CustomerServiceImpl();
     private Customer customer = new Customer();
 
     public String list() throws Exception{
+
+        //1.获得ServletActionContext对象
+        ServletContext context = ServletActionContext.getServletContext();
+        //2.从context中获得容器
+        WebApplicationContext applicationContext = WebApplicationContextUtils.getWebApplicationContext(context);
+        //3.通过容器获得对象
+        CustomerService service = (CustomerService) applicationContext.getBean("customerService");
+        //===================================================================================
+
 
         //1.获得参数
         String cust_name = ServletActionContext.getRequest().getParameter("cust_name");
@@ -45,6 +56,14 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 
     //添加客户
     public String add(){
+        //1.获得ServletActionContext对象
+        ServletContext context = ServletActionContext.getServletContext();
+        //2.从context中获得容器
+        WebApplicationContext applicationContext = WebApplicationContextUtils.getWebApplicationContext(context);
+        //3.通过容器获得对象
+        CustomerService service = (CustomerService) applicationContext.getBean("customerService");
+        //===================================================================================
+
         service.addCustomer(customer);
         return "toList";
     }

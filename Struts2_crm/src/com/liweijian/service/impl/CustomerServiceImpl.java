@@ -17,7 +17,7 @@ import java.util.List;
  * @Date:Create in 23:41 2018/1/6 0006
  */
 public class CustomerServiceImpl implements CustomerService {
-    private CustomerDao dao = new CustomerDaoImpl();
+    private CustomerDao dao;
 
     @Override
     public void addCustomer(Customer customer) {
@@ -61,5 +61,14 @@ public class CustomerServiceImpl implements CustomerService {
         List<Customer> customerList = null;
         customerList = dao.customerList();
         return customerList;
+    }
+
+
+    public CustomerDao getDao() {
+        return dao;
+    }
+
+    public void setDao(CustomerDao dao) {
+        this.dao = dao;
     }
 }
