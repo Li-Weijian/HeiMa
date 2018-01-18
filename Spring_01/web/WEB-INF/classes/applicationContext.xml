@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd ">
+
+
+    <!--
+        name: 用于在程序中获取该对象
+        class: 类的完整类名
+        scope: 类的作用范围  singleon：单例，整个应用只创建一个
+                             prototype: 多例，使用一次创建一个
+        注意：在整合strtus2时要将scope设置为prototype，因为Action规定每次访问都创建一个
+    -->
+
+    <!-- 空参构造方法 -->
+    <bean name="user" class="com.liweijian.bean.User" scope="prototype" init-method="initMethod" destroy-method="destoryMethod">
+
+        <!--  属性注入 -->
+        <property name="age" value="18"></property>
+        <property name="name" value="Tom"></property>
+        <property name="car" ref="car"></property>
+        <property name="list">
+            <list>
+                <value>Java</value>
+                <value>C</value>
+                <ref bean="car"></ref>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="name" value="liweijian"></entry>
+                <entry key="carName" value-ref="car"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="test1">Test1</prop>
+                <prop key="test2">Test2</prop>
+            </props>
+        </property>
+
+
+
+        <!-- 构造函数注入 -->
+        <!--<constructor-arg name="name" value="Jack"></constructor-arg>-->
+        <!--<constructor-arg name="age" value="18"></constructor-arg>-->
+        <!--<constructor-arg name="car" ref="car"></constructor-arg>-->
+
+        <!-- p名称空间注入 -->
+        <!-- spel注入 -->
+    </bean>
+    <bean id="car" class="com.liweijian.bean.Car"/>
+
+
+</beans>

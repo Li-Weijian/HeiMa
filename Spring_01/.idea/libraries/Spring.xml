@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Spring" type="spring">
+    <CLASSES>
+      <root url="jar://D:/API/lib/spring-framework-4.2.4.RELEASE-dist/spring-framework-4.2.4.RELEASE/libs/spring-beans-4.2.4.RELEASE.jar!/" />
+      <root url="jar://D:/API/lib/spring-framework-4.2.4.RELEASE-dist/spring-framework-4.2.4.RELEASE/libs/spring-context-4.2.4.RELEASE.jar!/" />
+      <root url="jar://D:/API/lib/spring-framework-4.2.4.RELEASE-dist/spring-framework-4.2.4.RELEASE/libs/spring-core-4.2.4.RELEASE.jar!/" />
+      <root url="jar://D:/API/lib/spring-framework-4.2.4.RELEASE-dist/spring-framework-4.2.4.RELEASE/libs/spring-expression-4.2.4.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
