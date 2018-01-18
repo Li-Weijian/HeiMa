@@ -20,7 +20,15 @@
         }
     </STYLE>
 
-    <META content="MSHTML 6.00.6000.16809" name=GENERATOR></HEAD>
+    <META content="MSHTML 6.00.6000.16809" name=GENERATOR>
+    <script type="text/javascript">
+        window.onload = function () {
+            if (window.parent != window){
+                window.parent.location.href = "${pageContext.request.contextPath}/login.jsp";
+            }
+        }
+    </script>
+</HEAD>
 <BODY>
 <FORM id=form1 name=form1 action="${pageContext.request.contextPath}/UserAction_login" method=post>
 
@@ -66,7 +74,7 @@
                                                                             style="WIDTH: 130px" name=txtcode></TD>
                                             <TD style="HEIGHT: 28px">&nbsp;</TD></TR>
                                         <TR>
-                                            <TD style="HEIGHT: 18px"><s:property value="exception.message"/> </TD>
+                                            <TD style="HEIGHT: 18px" colspan="2"><s:property value="exception.message"/> </TD>
                                             <TD style="HEIGHT: 18px"></TD>
                                             <TD style="HEIGHT: 18px"></TD></TR>
                                         <TR>

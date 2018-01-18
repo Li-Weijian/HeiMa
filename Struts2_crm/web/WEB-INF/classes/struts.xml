@@ -10,8 +10,28 @@
 
     <package name="crm" namespace="/" extends="struts-default">
 
+        <interceptors>
+            <!--1.注册拦截器-->
+            <interceptor name="loginInter" class="com.liweijian.web.interceptor.LoginInterceptor"></interceptor>
+            <!--2.注册拦截器栈-->
+            <interceptor-stack name="loginStack">
+                <interceptor-ref name="loginInter">
+                    <param name="excludeMethods">login</param>
+                </interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <!--3.设置为默认拦截器-->
+        <default-interceptor-ref name="loginStack"></default-interceptor-ref>
+
+        <!--设置全局结果集-->
+        <global-results>
+            <result name="toLogin" type="redirect">/login.jsp</result>
+        </global-results>
+
         <!--定义异常处理-->
         <global-exception-mappings>
+            <!--出现这个异常时，返回指定result-->
             <exception-mapping exception="java.lang.RuntimeException" result="error"/>
         </global-exception-mappings>
 

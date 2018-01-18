@@ -20,7 +20,15 @@
         }
     </STYLE>
 
-    <META content="MSHTML 6.00.6000.16809" name=GENERATOR></HEAD>
+    <META content="MSHTML 6.00.6000.16809" name=GENERATOR>
+    <script type="text/javascript">
+        window.onload = function () {
+            if (window.parent != window){
+                window.parent.location.href = "${pageContext.request.contextPath}/login.jsp";
+            }
+        }
+    </script>
+</HEAD>
 <BODY>
 <FORM id=form1 name=form1 action="${pageContext.request.contextPath}/UserAction_login" method=post>
 
