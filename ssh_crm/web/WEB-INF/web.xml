@@ -15,6 +15,20 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
+
+    <!--
+        扩大Hibernate的Session作用范围
+        目的：为了避免Hibernate懒加载的时候出现no-session的异常
+        注意：此过滤器的Filter必须要配置在Struts2的Filter之前
+    -->
+    <filter>
+        <filter-name>openSessionInViewFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>openSessionInViewFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     
     
     
