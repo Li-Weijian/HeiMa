@@ -87,20 +87,25 @@
     <bean name="userDao" class="com.liweijian.dao.impl.UserDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
+    <bean name="customerDao" class="com.liweijian.dao.impl.CustomerDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
 
 
-    <!--
-        配置Service
-    -->
+    <!-- 配置Service -->
     <bean name="userService" class="com.liweijian.service.impl.UserServiceImpl">
         <property name="userDao" ref="userDao"></property>
     </bean>
+    <bean name="customerService" class="com.liweijian.service.impl.CustomerServiceImpl">
+        <property name="customerDao" ref="customerDao"></property>
+    </bean>
 
-    <!--
-        配置actionBean，作用域必须为prototype
-    -->
+    <!-- 配置actionBean，作用域必须为prototype -->
     <bean name="userAction" class="com.liweijian.web.action.UserAction" scope="prototype">
         <property name="userService" ref="userService"></property>
+    </bean>
+    <bean class="com.liweijian.web.action.CustomerAction" name="customerAction" scope="prototype">
+        <property name="customerService" ref="customerService"></property>
     </bean>
 
 

@@ -14,9 +14,7 @@
     -->
     <constant name="struts.objectFactory" value="spring"></constant>
 
-    <!--
-        配置action
-    -->
+    <!-- 配置action -->
     <package name="ssh_crm" namespace="/" extends="struts-default">
         <global-exception-mappings>
             <exception-mapping exception="java.lang.RuntimeException" result="error"></exception-mapping>
@@ -26,6 +24,10 @@
         <action name="UserAction_*" class="userAction" method="{1}">
             <result name="toHome" type="redirect">/index.jsp</result>
             <result name="error">/login.jsp</result>
+        </action>
+
+        <action name="CustomerAction_*" class="customerAction" method="{1}">
+            <result name="list">/jsp/customer/list.jsp</result>
         </action>
     </package>
 </struts>

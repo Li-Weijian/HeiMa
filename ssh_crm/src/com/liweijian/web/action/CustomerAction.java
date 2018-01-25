@@ -1,0 +1,66 @@
+package com.liweijian.web.action;
+
+import com.liweijian.domain.Customer;
+import com.liweijian.service.CustomerService;
+import com.liweijian.utils.PageBean;
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
+
+/**
+ * @Author:Liweijian
+ * @Description:
+ * @Date:Create in 23:36 2018/1/23 0023
+ */
+public class CustomerAction extends ActionSupport implements ModelDriven<Customer> {
+
+    private Customer customer = new Customer();
+    private CustomerService customerService;
+
+    private Integer currentPage;
+    private Integer pageSize;
+
+
+    //获取页面数据
+    public String getPageBean(){
+
+        //封装查询条件
+        DetachedCriteria dc = DetachedCriteria.forClass(Customer.class);
+        dc.add(Restrictions.like("cust_name","%d"+customer.getCust_name()+"%"));
+
+        //1.调用Service处理分页逻辑，并返回PageBean对象
+        PageBean pageBean = customerService.getPageBean(dc,currentPage,pageSize);
+        //2.存入request并转发到页面
+        ActionContext.getContext().put("pageBean",pageBean);
+        return "list";
+    }
+
+
+    public Integer getCurrentPage() {
+        return currentPage;
+    }
+
+    public void setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public void setCustomerService(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
+    @Override
+    public Customer getModel() {
+        return customer;
+    }
+}
