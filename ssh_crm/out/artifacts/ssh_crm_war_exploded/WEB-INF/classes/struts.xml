@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
 
@@ -14,18 +14,17 @@
     -->
     <constant name="struts.objectFactory" value="spring"></constant>
 
-    <!--
-        配置action
-    -->
+    <!-- 配置action -->
     <package name="ssh_crm" namespace="/" extends="struts-default">
-        <global-exception-mappings>
-            <exception-mapping exception="java.lang.RuntimeException" result="error"></exception-mapping>
-        </global-exception-mappings>
 
         <!-- 将class的值改为Spring配置文件中的bean引用 -->
         <action name="UserAction_*" class="userAction" method="{1}">
             <result name="toHome" type="redirect">/index.jsp</result>
             <result name="error">/login.jsp</result>
+        </action>
+
+        <action name="CustomerAction_*" class="customerAction" method="{1}">
+            <result name="list">/jsp/customer/list.jsp</result>
         </action>
     </package>
 </struts>
