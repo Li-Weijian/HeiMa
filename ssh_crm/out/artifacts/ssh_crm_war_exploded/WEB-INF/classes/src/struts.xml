@@ -16,6 +16,12 @@
 
     <!-- 配置action -->
     <package name="ssh_crm" namespace="/" extends="struts-default">
+        <global-results>
+            <result name="error" type="redirect">login.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.RuntimeException" result="error"></exception-mapping>
+        </global-exception-mappings>
 
         <!-- 将class的值改为Spring配置文件中的bean引用 -->
         <action name="UserAction_*" class="userAction" method="{1}">

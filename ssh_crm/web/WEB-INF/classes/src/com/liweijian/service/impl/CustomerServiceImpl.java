@@ -29,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
         PageBean pageBean = new PageBean(totalCount,pageSize,currentPage);
 
         //3.查询客户列表 -- 分页
-        List<Customer> list = customerDao.getCustomerList(dc,pageBean.getStart(),pageBean.getPageSize());
+        List<Customer> list = customerDao.getPageList(dc,pageBean.getStart(),pageBean.getPageSize());
         System.out.println(list.size());
         pageBean.setList(list);
 

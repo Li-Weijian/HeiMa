@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <!--
+        整合struts2和Spring需要配置常量
+        该常量可以在/WEB-INF/lib/struts2-core-2.3.24.jar!/org/apache/struts2/default.properties下查找
+        # struts.objectFactory = spring  //将action的创建交给Spring容器
+        struts.objectFactory.spring.autoWire = name  //自动装配action的依赖属性，默认开启
+    -->
+    <constant name="struts.objectFactory" value="spring"></constant>
+
+    <!--
+        配置action
+    -->
+    <package name="ssh_crm" namespace="/" extends="struts-default">
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.RuntimeException" result="error"></exception-mapping>
+        </global-exception-mappings>
+
+        <!-- 将class的值改为Spring配置文件中的bean引用 -->
+        <action name="UserAction_*" class="userAction" method="{1}">
+            <result name="toHome" type="redirect">/index.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+    </package>
+</struts>

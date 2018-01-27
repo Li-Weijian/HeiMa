@@ -17,7 +17,7 @@ import java.util.List;
  * @Description:
  * @Date:Create in 19:35 2018/1/24 0024
  */
-public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 
 
     @Override
@@ -52,9 +52,4 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 */
     }
 
-    @Override
-    //登录
-    public void save(User user) {
-        getHibernateTemplate().save(user);
-    }
 }

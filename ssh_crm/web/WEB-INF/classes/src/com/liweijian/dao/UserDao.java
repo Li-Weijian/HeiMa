@@ -5,10 +5,8 @@ import com.liweijian.domain.User; /**
  * @Description:
  * @Date:Create in 19:35 2018/1/24 0024
  */
-public interface UserDao {
-
+public interface UserDao extends BaseDao<User>{
 
     User getByUserCode(String userCode);
 
-    void save(User user);
 }
