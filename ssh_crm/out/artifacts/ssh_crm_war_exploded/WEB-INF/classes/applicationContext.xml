@@ -90,6 +90,9 @@
     <bean name="customerDao" class="com.liweijian.dao.impl.CustomerDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
+    <bean name="baseDictDao" class="com.liweijian.dao.impl.BaseDictDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
 
 
     <!-- 配置Service -->
@@ -99,6 +102,9 @@
     <bean name="customerService" class="com.liweijian.service.impl.CustomerServiceImpl">
         <property name="customerDao" ref="customerDao"></property>
     </bean>
+    <bean name="baseDictService" class="com.liweijian.service.impl.BaseDictServiceImpl">
+        <property name="bdDao" ref="baseDictDao"></property>
+    </bean>
 
     <!-- 配置action，作用域必须为prototype -->
     <bean name="userAction" class="com.liweijian.web.action.UserAction" scope="prototype">
@@ -106,6 +112,9 @@
     </bean>
     <bean class="com.liweijian.web.action.CustomerAction" name="customerAction" scope="prototype">
         <property name="customerService" ref="customerService"></property>
+    </bean>
+    <bean class="com.liweijian.web.action.BaseDictAction" name="baseDictAction" scope="prototype">
+        <property name="bdService" ref="baseDictService"></property>
     </bean>
 
 
