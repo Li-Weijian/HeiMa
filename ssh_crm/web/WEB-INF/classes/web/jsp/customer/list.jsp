@@ -100,7 +100,7 @@
 													<TD>客户名称</TD>
 													<TD>客户级别</TD>
 													<TD>客户来源</TD>
-													<TD>联系人</TD>
+													<TD>客户行业</TD>
 													<TD>电话</TD>
 													<TD>手机</TD>
 													<TD>操作</TD>
@@ -110,15 +110,15 @@
                                                 <s:iterator value="#pageBean.list" var="cust">
                                                     <TR style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
                                                         <TD><s:property value="#cust.cust_name"></s:property></TD>
-                                                        <TD><s:property value="#cust.cust_level"></s:property></TD>
-                                                        <TD><s:property value="#cust.cust_source"></s:property></TD>
-                                                        <TD><s:property value="#cust.cust_linkman"></s:property></TD>
+                                                        <TD><s:property value="#cust.cust_level.dict_item_name"></s:property></TD>
+                                                        <TD><s:property value="#cust.cust_source.dict_item_name"></s:property></TD>
+                                                        <TD><s:property value="#cust.cust_industry.dict_item_name"></s:property></TD>
                                                         <TD><s:property value="#cust.cust_phone"></s:property></TD>
                                                         <TD><s:property value="#cust.cust_mobile"></s:property></TD>
                                                         <TD>
-                                                            <a href="${pageContext.request.contextPath }/customerServlet?method=edit&custId=${customer.cust_id}">修改</a>
+                                                            <a href="${pageContext.request.contextPath }/CustomerAction_getCustomerById.action?cust_id=<s:property value="#cust.cust_id"/>">修改</a>
                                                             &nbsp;&nbsp;
-                                                            <a href="${pageContext.request.contextPath }/customerServlet?method=delete&custId=${customer.cust_id}">删除</a>
+                                                            <a href="${pageContext.request.contextPath }/">删除</a>
                                                         </TD>
                                                     </TR>
                                                 </s:iterator>

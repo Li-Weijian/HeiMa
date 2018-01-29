@@ -14,8 +14,4 @@ public interface CustomerService {
     PageBean getPageBean(DetachedCriteria dc, Integer currentPage, Integer pageSize);
     //保存客户
     void save(Customer customer);
-    //根据id查询客户
-    Customer getCustomerById(Long cust_id);
-    //更新客户
-    void update(Customer customer);
 }

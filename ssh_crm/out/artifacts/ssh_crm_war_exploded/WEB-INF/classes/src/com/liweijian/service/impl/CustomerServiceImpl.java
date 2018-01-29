@@ -4,7 +4,6 @@ import com.liweijian.dao.CustomerDao;
 import com.liweijian.domain.Customer;
 import com.liweijian.service.CustomerService;
 import com.liweijian.utils.PageBean;
-import org.hibernate.Criteria;
 import org.hibernate.criterion.DetachedCriteria;
 
 import java.util.List;
@@ -35,6 +34,24 @@ public class CustomerServiceImpl implements CustomerService {
 
         //4.返回PageBean
         return pageBean;
+    }
+
+    @Override
+    //保存客户
+    public void save(Customer customer) {
+        customerDao.save(customer);
+    }
+
+    @Override
+    //根据id查询客户
+    public Customer getCustomerById(Long cust_id) {
+        return customerDao.getByid(cust_id);
+    }
+
+    @Override
+    //更新客户
+    public void update(Customer customer) {
+        customerDao.update(customer);
     }
 
 

@@ -12,4 +12,10 @@ import org.hibernate.criterion.DetachedCriteria;
 public interface CustomerService {
     //获取页面数据
     PageBean getPageBean(DetachedCriteria dc, Integer currentPage, Integer pageSize);
+    //保存客户
+    void save(Customer customer);
+    //根据id查询客户
+    Customer getCustomerById(Long cust_id);
+    //更新客户
+    void update(Customer customer);
 }

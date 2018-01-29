@@ -35,7 +35,6 @@
                 <param name="actionName">CustomerAction_list</param>
             </result>
             <result name="list">/jsp/customer/list.jsp</result>
-            <result name="edit">/jsp/customer/edit.jsp</result>
         </action>
         <!-- 数据字典action类 -->
         <action name="baseDictAction" class="baseDictAction" method="execute"></action>

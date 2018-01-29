@@ -37,21 +37,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    //保存客户
     public void save(Customer customer) {
         customerDao.save(customer);
-    }
-
-    @Override
-    //根据id查询客户
-    public Customer getCustomerById(Long cust_id) {
-        return customerDao.getByid(cust_id);
-    }
-
-    @Override
-    //更新客户
-    public void update(Customer customer) {
-        customerDao.update(customer);
     }
 
 

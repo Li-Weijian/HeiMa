@@ -23,7 +23,7 @@
 </HEAD>
 <BODY>
 	<FORM id=form1 name=form1
-		action="${pageContext.request.contextPath }/CustomerAction_add.action" method=post>
+		action="${pageContext.request.contextPath }/CustomerAction_save.action" method=post enctype="multipart/form-data">
 
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
 			<TBODY>
@@ -81,11 +81,16 @@
 								<INPUT class=textbox id=sChannel2 style="WIDTH: 180px" maxLength=50 name="cust_mobile">
 								</td>
 							</TR>
+                            <td>照片 ：</td>
+                            <td>
+                                <INPUT class=textbox id=sChannel2 style="WIDTH: 180px" maxLength=50 name="photo" type="file">
+                            </td>
 							<tr>
 								<td rowspan=2>
 								<INPUT class=button id=sButton2 type=submit value=" 保存 " name=sButton2>
 								</td>
 							</tr>
+
 						</TABLE>
 						
 						

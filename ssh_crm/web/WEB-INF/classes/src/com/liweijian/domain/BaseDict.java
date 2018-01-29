@@ -28,6 +28,9 @@ public class BaseDict {
     private Integer dict_sort;
     private Character dict_enable;
 
+    public BaseDict() {
+
+    }
 
     public String getDict_id() {
         return dict_id;
