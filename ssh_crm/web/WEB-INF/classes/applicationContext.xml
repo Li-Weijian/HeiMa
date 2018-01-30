@@ -93,6 +93,9 @@
     <bean name="baseDictDao" class="com.liweijian.dao.impl.BaseDictDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
+    <bean name="linkManDao" class="com.liweijian.dao.impl.LinkManDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
 
 
     <!-- 配置Service -->
@@ -105,6 +108,10 @@
     <bean name="baseDictService" class="com.liweijian.service.impl.BaseDictServiceImpl">
         <property name="bdDao" ref="baseDictDao"></property>
     </bean>
+    <bean class="com.liweijian.service.impl.LinkManServiceImpl" name="linkManService">
+        <property name="lmDao" ref="linkManDao"></property>
+    </bean>
+
 
     <!-- 配置action，作用域必须为prototype -->
     <bean name="userAction" class="com.liweijian.web.action.UserAction" scope="prototype">
@@ -115,6 +122,9 @@
     </bean>
     <bean class="com.liweijian.web.action.BaseDictAction" name="baseDictAction" scope="prototype">
         <property name="bdService" ref="baseDictService"></property>
+    </bean>
+    <bean class="com.liweijian.web.action.LinkManAction" name="linkManAction" scope="prototype">
+        <property name="lmService" ref="linkManService"></property>
     </bean>
 
 

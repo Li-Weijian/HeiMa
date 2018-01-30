@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<TITLE>添加联系人</TITLE> 
+<TITLE>添加联系人</TITLE>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK href="${pageContext.request.contextPath }/css/Style.css" type=text/css rel=stylesheet>
 <LINK href="${pageContext.request.contextPath }/css/Manage.css" type=text/css
@@ -14,10 +14,7 @@
 <META content="MSHTML 6.00.2900.3492" name=GENERATOR>
 </HEAD>
 <BODY>
-	<FORM id=form1 name=form1
-		action="${pageContext.request.contextPath }/linkmanServlet?method=addLinkman"
-		method=post>
-		
+	<FORM id=form1 name=form1 action="${pageContext.request.contextPath }/LinkManAction_save.action" method=post>
 
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
 			<TBODY>
@@ -48,7 +45,11 @@
 						<TABLE cellSpacing=0 cellPadding=5  border=0>
 							<tr>
 								<td>所属客户：</td>
-								<td colspan="3"><input type="text" name="cust_id" style="WIDTH: 180px"/></td>
+								<td colspan="3"><input type="text" name="cust_name" id="cust_name" style="WIDTH: 180px"/>
+                                    <!-- 隐藏域：保存客户id -->
+                                    <input type="hidden" value="" name="customer.cust_id" id="cust_id"/>
+                                    <input type="button" value="选择客户" onclick="window.open('{pageContext.request.contextPath}/CustomerAction_list?select=true','','width=600,height=300')">
+                                </td>
 							</tr>
 							<TR>
 								<td>联系人名称：</td>
@@ -80,8 +81,8 @@
 								</td>
 							</tr>
 						</TABLE>
-						
-						
+
+
 					</TD>
 					<TD width=15 background="${pageContext.request.contextPath }/images/new_023.jpg">
 					<IMG src="${pageContext.request.contextPath }/images/new_023.jpg" border=0></TD>

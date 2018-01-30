@@ -35,6 +35,15 @@ public class Linkman {
     private String lkm_qq;
     private String lkm_position;
     private String lkm_memo;
+    private Customer customer;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public Long getLkm_id() {
         return lkm_id;

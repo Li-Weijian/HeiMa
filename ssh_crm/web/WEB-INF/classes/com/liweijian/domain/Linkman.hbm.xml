@@ -18,13 +18,12 @@
         <property name="lkm_position" />
         <property name="lkm_memo" />
 
-        <!-- 多对一 -->
-        <!--
+        <!-- 多对一
             name属性:引用属性名
             column属性: 外键列名
             class属性: 与我关联的对象完整类名
-         -->
-        <!--<many-to-one name="customer" column="lkm_cust_id" class="Customer"/>-->
+        -->
+        <many-to-one name="customer" column="lkm_cust_id" class="Customer"/>
 
     </class>
 </hibernate-mapping>

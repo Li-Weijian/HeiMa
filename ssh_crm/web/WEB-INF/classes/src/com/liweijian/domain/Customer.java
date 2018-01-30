@@ -1,6 +1,7 @@
 package com.liweijian.domain;
 
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -96,11 +97,6 @@ public class Customer {
     public void setCust_create_id(Long cust_create_id) {
         this.cust_create_id = cust_create_id;
     }
-
-
-
-
-
 
 
     public String getCust_phone() {

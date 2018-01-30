@@ -24,6 +24,9 @@
 </HEAD>
 <BODY>
 	<FORM id=form1 name=form1 action="${pageContext.request.contextPath }/CustomerAction_update.action" method=post>
+        <%--
+            没有上传id则会出现这个异常org.hibernate.TransientObjectException: The given object has a null identifier:
+        --%>
 		<input type="hidden" name="cust_id" value="<s:property value="#customer.cust_id" />"/>
 
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>

@@ -25,6 +25,19 @@
         //2.提交
         $("#pageForm").submit();
     };
+	
+	function selectCustomer(cust_id,cust_name) {
+	    //获取打开此窗口的引用
+	    var opener = window.opener;
+	    //获取对象窗口的document对象
+	    var document = opener.document;
+	    //给客户名称赋值
+        document.getElementById("cust_id").value=cust_id;
+        document.getElementById("cust_name").value=cust_name;
+        //关闭窗口
+        window.close();
+
+    };
 
 </SCRIPT>
 
@@ -72,6 +85,8 @@
                                         <input type="hidden" name="pageSize" id="pageSizeInput" value="<s:property value="#pageBean.pageSize"/>"/>
                                         <%--隐藏域:--%>
                                         <input type="hidden" name="currentPage" id="currentPageInput" value="<s:property value="#pageBean.currentPage" />"/>
+                                        <%--隐藏域：是否显示选择按钮，应用于别的窗口打开此窗口--%>
+                                        <input type="hidden" name="select" value="<s:property value="#parameters.select" />"/>
 
 										<TABLE cellSpacing=0 cellPadding=2 border=0>
 											<TBODY>
@@ -116,9 +131,14 @@
                                                         <TD><s:property value="#cust.cust_phone"></s:property></TD>
                                                         <TD><s:property value="#cust.cust_mobile"></s:property></TD>
                                                         <TD>
-                                                            <a href="${pageContext.request.contextPath }/CustomerAction_getCustomerById.action?cust_id=<s:property value="#cust.cust_id"/>">修改</a>
-                                                            &nbsp;&nbsp;
-                                                            <a href="${pageContext.request.contextPath }/">删除</a>
+                                                            <s:if test="#parameters.select == null">
+                                                                <a href="${pageContext.request.contextPath }/CustomerAction_getCustomerById.action?cust_id=<s:property value="#cust.cust_id"/>">修改</a>
+                                                                &nbsp;&nbsp;
+                                                                <a href="${pageContext.request.contextPath }/">删除</a>
+                                                            </s:if>
+                                                            <s:else>
+                                                                <input type="button" value="选择" onclick="selectCustomer(<s:property value="#cust.cust_id"/>,'<s:property value="#cust.cust_name"/>')" />
+                                                            </s:else>
                                                         </TD>
                                                     </TR>
                                                 </s:iterator>
@@ -168,6 +188,5 @@
 				</TR>
 			</TBODY>
 		</TABLE>
-
 </BODY>
 </HTML>
