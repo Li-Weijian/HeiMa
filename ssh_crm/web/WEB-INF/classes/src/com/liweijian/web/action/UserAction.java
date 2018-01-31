@@ -17,9 +17,17 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
     private User user = new User();
     private UserService userService;
 
+
+    //用户登录
     public String login(){
         //1.根据code查询用户
-        User u = userService.getUserByCodePassword(user);
+        User u = null;
+        try {
+            u = userService.getUserByCodePassword(user);
+        }catch (Exception e){
+            ActionContext.getContext().put("error",e.getMessage());
+            return "loginError";
+        }
 
         //2.将用户存入session
         ActionContext.getContext().getSession().put("user",u);
@@ -28,9 +36,16 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
         return "toHome";
     }
 
-
-
-
+    //用户注册
+    public String save() throws Exception {
+        try {
+            userService.save(user);
+        }catch (Exception e){
+            ActionContext.getContext().put("error",e.getMessage());
+            return "registError";
+        }
+        return "toLogin";
+    }
 
     public void setUserService(UserService userService) {
         this.userService = userService;

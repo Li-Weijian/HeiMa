@@ -16,17 +16,30 @@
 
     <!-- 配置action -->
     <package name="ssh_crm" namespace="/" extends="struts-default">
-       <!-- <global-results>
-            <result name="error" type="redirect">login.jsp</result>
+        <!-- 1、注册拦截器 -->
+        <interceptors>
+            <interceptor name="permissInter" class="com.liweijian.web.action.interceptor.PermissInterceptor"></interceptor>
+        <!-- 2、注册拦截器栈 -->
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="permissInter">
+                    <param name="excludeMethods">login,regist</param>
+                </interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <!-- 3、设置默认拦截器栈 -->
+        <default-interceptor-ref name="myStack"></default-interceptor-ref>
+
+        <!-- 全局结果集配置 -->
+       <global-results>
+            <result name="toLogin" type="redirect">/login.jsp</result>
         </global-results>
-        <global-exception-mappings>
-            <exception-mapping exception="java.lang.RuntimeException" result="error"></exception-mapping>
-        </global-exception-mappings>
--->
+
         <!-- 将class的值改为Spring配置文件中的bean引用 -->
         <action name="UserAction_*" class="userAction" method="{1}">
             <result name="toHome" type="redirect">/index.jsp</result>
-            <!--<result name="error">/login.jsp</result>-->
+            <result name="registError">/regist.jsp</result>
+            <result name="loginError">/login.jsp</result>
         </action>
 
         <action name="CustomerAction_*" class="customerAction" method="{1}">
