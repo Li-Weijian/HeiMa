@@ -44,6 +44,7 @@
                 <param name="namespace">/</param>
                 <param name="actionName">LinkManAction_list</param>
             </result>
+            <result name="edit">/jsp/linkman/edit.jsp</result>
         </action>
 
         <!-- 数据字典action类 -->

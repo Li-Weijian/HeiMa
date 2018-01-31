@@ -1,7 +1,6 @@
 package com.liweijian.service.impl;
 
 import com.liweijian.dao.LinkmanDao;
-import com.liweijian.domain.Customer;
 import com.liweijian.domain.Linkman;
 import com.liweijian.service.LinkmanService;
 import com.liweijian.utils.PageBean;
@@ -38,6 +37,16 @@ public class LinkManServiceImpl implements LinkmanService {
 
         //4.返回PageBean
         return pageBean;
+    }
+
+    @Override
+    public Linkman getLinkmanById(Long lkm_id) {
+        return lmDao.getByid(lkm_id);
+    }
+
+    @Override
+    public void update(Linkman linkman) {
+        lmDao.update(linkman);
     }
 
 

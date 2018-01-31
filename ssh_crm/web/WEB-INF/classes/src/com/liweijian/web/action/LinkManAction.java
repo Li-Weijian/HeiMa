@@ -55,6 +55,25 @@ public class LinkManAction extends ActionSupport implements ModelDriven {
         return "toList";
     }
 
+
+    //根据id获取联系人
+    public String getLinkManById(){
+
+        //调用Service查询
+        Linkman idLinkman = lmService.getLinkmanById(linkman.getLkm_id());
+        //将查询到的添加到request
+        ActionContext.getContext().put("linkman",idLinkman);
+        //转发
+        return "edit";
+    }
+
+    //更新客户
+    public String update(){
+
+        lmService.update(linkman);
+        return "toList";
+    }
+
     public Integer getCurrentPage() {
         return currentPage;
     }

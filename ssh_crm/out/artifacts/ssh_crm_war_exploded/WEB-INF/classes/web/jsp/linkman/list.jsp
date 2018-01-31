@@ -114,11 +114,14 @@
                                                 <s:iterator value="#pageBean.list" var="linkman">
                                                     <TR style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
                                                         <TD><s:property value="#linkman.lkm_name"></s:property></TD>
-                                                        <TD><s:property value="#linkman.lkm_gender"></s:property></TD>
+                                                        <TD>
+                                                            <s:if test="#linkman.lkm_gender=='1'">男</s:if>
+                                                            <s:if test="#linkman.lkm_gender=='2'">女</s:if>
+                                                        </TD>
                                                         <TD><s:property value="#linkman.lkm_phone"></s:property></TD>
                                                         <TD><s:property value="#linkman.lkm_mobile"></s:property></TD>
                                                         <TD>
-                                                                <a href="${pageContext.request.contextPath }//>">修改</a>
+                                                                <a href="${pageContext.request.contextPath }/LinkManAction_getLinkManById.action?lkm_id=<s:property value="#linkman.lkm_id"/>">修改</a>
                                                                 &nbsp;&nbsp;
                                                                 <a href="${pageContext.request.contextPath }/">删除</a>
                                                         </TD>
