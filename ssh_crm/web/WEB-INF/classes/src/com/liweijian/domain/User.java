@@ -26,6 +26,16 @@ public class User {
     private String user_name;
     private String user_password;
     private Character user_state;
+    private Set<SaleVisit> saleVisitSet = new HashSet<SaleVisit>();
+
+
+    public Set<SaleVisit> getSaleVisitSet() {
+        return saleVisitSet;
+    }
+
+    public void setSaleVisitSet(Set<SaleVisit> saleVisitSet) {
+        this.saleVisitSet = saleVisitSet;
+    }
 
     public Long getUser_id() {
         return user_id;

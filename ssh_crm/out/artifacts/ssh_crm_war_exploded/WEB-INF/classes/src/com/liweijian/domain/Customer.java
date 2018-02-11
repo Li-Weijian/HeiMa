@@ -33,6 +33,16 @@ public class Customer {
     private BaseDict cust_level;
     private String cust_phone;
     private String cust_mobile;
+    private Set<SaleVisit> saleVisitSet = new HashSet<SaleVisit>();
+
+
+    public Set<SaleVisit> getSaleVisitSet() {
+        return saleVisitSet;
+    }
+
+    public void setSaleVisitSet(Set<SaleVisit> saleVisitSet) {
+        this.saleVisitSet = saleVisitSet;
+    }
 
     public BaseDict getCust_source() {
         return cust_source;

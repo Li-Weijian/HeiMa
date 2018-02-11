@@ -60,6 +60,15 @@
             <result name="edit">/jsp/linkman/edit.jsp</result>
         </action>
 
+        <action name="SaleVisitAction_*" class="saleVisitAction" method="{1}">
+            <result name="edit">/jsp/salevisit/edit.jsp</result>
+            <result name="list">/jsp/salevisit/list.jsp</result>
+            <result name="toList" type="redirectAction">
+                <param name="namespace">/</param>
+                <param name="actionName">SaleVisitAction_list</param>
+            </result>
+        </action>
+
         <!-- 数据字典action类 -->
         <action name="baseDictAction" class="baseDictAction" method="execute"></action>
     </package>
