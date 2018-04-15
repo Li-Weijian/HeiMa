@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace：命名空间，用于隔离sql，还有一个很重要的作用，后面会讲 -->
+<mapper namespace="com.liweijian.mapper.OrdersMapper">
+
+    <resultMap id="Orders" type="Orders">
+        <!--
+            property 是pojo对象中的字段
+            column 是 sql语句中的字段
+         -->
+        <result property="userId" column="user_id"/>
+    </resultMap>
+
+
+    <select id="selectAllOrders" resultMap="Orders">
+        select id, user_id, number,createtime, note from orders
+    </select>
+
+
+</mapper>
