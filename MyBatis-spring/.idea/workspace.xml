@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+            <state relative-caret-position="314">
+              <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
               <folding>
                 <element signature="e#1205#1221#0" expanded="true" />
                 <element signature="e#1260#1273#0" expanded="true" />
@@ -27,29 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sqlMapConfig.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sqlMapConfig.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sqlMapConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liweijian/sqlmap/User.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Userdao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liweijian/dao/Userdao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
+            <state relative-caret-position="389">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -69,11 +51,29 @@
       <file leaf-file-name="MyBatis_SpringTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liweijian/junit/MyBatis_SpringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="350">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -83,8 +83,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -93,18 +93,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/liweijian/pojo/QueryVo.java" />
         <option value="$PROJECT_DIR$/src/com/liweijian/pojo/Orders.java" />
-        <option value="$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/com/liweijian/mapper/OrdersMapper.java" />
         <option value="$PROJECT_DIR$/src/com/liweijian/junit/MapperTest.java" />
         <option value="$PROJECT_DIR$/src/com/liweijian/pojo/User.java" />
         <option value="$PROJECT_DIR$/src/com/liweijian/mapper/OrdersMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/liweijian/dao/Userdao.java" />
         <option value="$PROJECT_DIR$/src/com/liweijian/dao/UserdaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/com/liweijian/junit/MyBatis_SpringTest.java" />
-        <option value="$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/liweijian/sqlmap/User.xml" />
+        <option value="$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/liweijian/junit/MyBatis_SpringTest.java" />
         <option value="$PROJECT_DIR$/src/sqlMapConfig.xml" />
+        <option value="$PROJECT_DIR$/src/applicationContext.xml" />
       </list>
     </option>
   </component>
@@ -117,7 +117,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="95" />
     <option name="y" value="15" />
     <option name="width" value="1750" />
@@ -161,6 +161,47 @@
               <item name="MyBatis-spring" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="liweijian" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBatis-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBatis-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="liweijian" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-spring-1.2.2.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+            <path>
+              <item name="MyBatis-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBatis-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="liweijian" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-spring-1.2.2.jar" type="ab9368bb:PsiFileNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBatis-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBatis-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="liweijian" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-spring-1.2.2.jar" type="ab9368bb:PsiFileNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBatis-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBatis-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="liweijian" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBatis-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBatis-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="liweijian" type="462c0819:PsiDirectoryNode" />
               <item name="sqlmap" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,11 +227,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Code\HeiMa\MyBatis-spring\src\com\liweijian\mapper" />
       <recent name="F:\Code\HeiMa\MyBatis-spring\src\com\liweijian\lib" />
       <recent name="F:\Code\HeiMa\MyBatis-spring\src\com\liweijian" />
       <recent name="F:\Code\HeiMa\MyBatis_2\src\com\liweijian\mapper" />
       <recent name="F:\Code\HeiMa\MyBatis_1\src" />
-      <recent name="F:\Code\HeiMa\MyBatis_1\src\com\liweijian\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -205,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatis_SpringTest.testSelectUserById">
+  <component name="RunManager" selected="JUnit.MyBatis_SpringTest.findUserById">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -255,29 +296,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="MapperTest.selectUserByIds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyBatis_1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.liweijian.junit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.liweijian.junit" />
-      <option name="MAIN_CLASS_NAME" value="com.liweijian.junit.MapperTest" />
-      <option name="METHOD_NAME" value="selectUserByIds" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="MyBatis_SpringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyBatis_1" />
       <extension name="coverage">
@@ -292,6 +310,29 @@
       <option name="MAIN_CLASS_NAME" value="com.liweijian.junit.MyBatis_SpringTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MyBatis_SpringTest.findUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBatis_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liweijian.junit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.liweijian.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.liweijian.junit.MyBatis_SpringTest" />
+      <option name="METHOD_NAME" value="findUserById" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -363,19 +404,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.MapperTest.selectUserByIds" />
       <item itemvalue="JUnit.MapperTest.selectOrdersOfUser" />
       <item itemvalue="JUnit.MapperTest.selectUserAndOrders" />
       <item itemvalue="JUnit.MyBatis_SpringTest.testSelectUserById" />
       <item itemvalue="JUnit.MyBatis_SpringTest" />
+      <item itemvalue="JUnit.MyBatis_SpringTest.findUserById" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatis_SpringTest.findUserById" />
         <item itemvalue="JUnit.MyBatis_SpringTest.testSelectUserById" />
         <item itemvalue="JUnit.MyBatis_SpringTest" />
         <item itemvalue="JUnit.MapperTest.selectUserAndOrders" />
         <item itemvalue="JUnit.MapperTest.selectOrdersOfUser" />
-        <item itemvalue="JUnit.MapperTest.selectUserByIds" />
       </list>
     </recent_temporary>
   </component>
@@ -394,29 +435,11 @@
       <workItem from="1523806069156" duration="3814000" />
       <workItem from="1523843640416" duration="2569000" />
       <workItem from="1523871022683" duration="3197000" />
-      <workItem from="1523883609022" duration="4166000" />
+      <workItem from="1523883609022" duration="5592000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 01m 34s.xml">
-      <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 04m 51s.xml">
-      <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 05m 44s.xml">
-      <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 05m 59s.xml">
-      <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 07m 49s.xml">
-      <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 08m 28s.xml">
-      <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 10m 17s.xml">
       <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
     </history-entry>
@@ -429,9 +452,27 @@
     <history-entry file="MyBatis_SpringTest_testSelectUserById - 2018.04.16 at 22h 14m 29s.xml">
       <configuration name="MyBatis_SpringTest.testSelectUserById" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MyBatis_SpringTest_findUserById - 2018.04.16 at 22h 24m 19s.xml">
+      <configuration name="MyBatis_SpringTest.findUserById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyBatis_SpringTest_findUserById - 2018.04.16 at 22h 25m 34s.xml">
+      <configuration name="MyBatis_SpringTest.findUserById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyBatis_SpringTest_findUserById - 2018.04.16 at 22h 27m 11s.xml">
+      <configuration name="MyBatis_SpringTest.findUserById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyBatis_SpringTest_findUserById - 2018.04.16 at 22h 27m 32s.xml">
+      <configuration name="MyBatis_SpringTest.findUserById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyBatis_SpringTest_findUserById - 2018.04.16 at 22h 27m 54s.xml">
+      <configuration name="MyBatis_SpringTest.findUserById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyBatis_SpringTest_findUserById - 2018.04.16 at 22h 37m 24s.xml">
+      <configuration name="MyBatis_SpringTest.findUserById" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21769000" />
+    <option name="totallyTimeSpent" value="23195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -446,7 +487,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3281046" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281046" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -458,7 +499,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37124184" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37124184" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -790,16 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liweijian/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -848,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="65" column="43" lean-forward="true" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liweijian/junit/MapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4112">
@@ -872,19 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
-          <folding>
-            <element signature="e#1205#1221#0" expanded="true" />
-            <element signature="e#1260#1273#0" expanded="true" />
-            <element signature="e#1317#1335#0" expanded="true" />
-            <element signature="e#1379#1397#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liweijian/sqlmap/User.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -892,20 +903,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liweijian/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liweijian/junit/MyBatis_SpringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="350">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sqlMapConfig.xml">
+    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="314">
+          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+          <folding>
+            <element signature="e#1205#1221#0" expanded="true" />
+            <element signature="e#1260#1273#0" expanded="true" />
+            <element signature="e#1317#1335#0" expanded="true" />
+            <element signature="e#1379#1397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

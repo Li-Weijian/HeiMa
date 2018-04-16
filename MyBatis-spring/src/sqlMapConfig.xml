@@ -10,7 +10,11 @@
     </typeAliases>
 
     <mappers>
-        <mapper resource="com/liweijian/sqlmap/User.xml"/>
+        <!--<mapper resource="com/liweijian/sqlmap/User.xml"/>-->
+        <package name="com.liweijian.mapper"/>
+        <!--<mapper resource="com/liweijian/mapper/UserMapper.xml"/>-->
     </mappers>
+
+
 
 </configuration>

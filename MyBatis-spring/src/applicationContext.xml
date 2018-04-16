@@ -29,9 +29,20 @@
         <property name="configLocation" value="classpath:sqlMapConfig.xml"/>
     </bean>
 
-    <!-- Dao原始Dao -->
+    <!-- 方式一： Dao原始Dao -->
     <bean id="userDao" class="com.liweijian.dao.UserdaoImpl">
         <property name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
+    </bean>
+
+    <!-- 方式二： Mapper动态代理开发 -->
+    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
+        <property name="mapperInterface" value="com.liweijian.mapper.UserMapper"/>
+    </bean>
+
+    <!-- 方式三：Mapper动态代理开发 扫描配置 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.liweijian.mapper"></property>
     </bean>
 
 </beans>
