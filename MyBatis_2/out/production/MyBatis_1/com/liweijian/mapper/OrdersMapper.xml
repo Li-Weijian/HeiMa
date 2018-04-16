@@ -18,5 +18,38 @@
         select id, user_id, number,createtime, note from orders
     </select>
 
+    <resultMap id="orders" type="Orders">
+        <id column="id" property="id"/>
+        <result column="number" property="number"/>
+        <result column="user_id" property="userId"/>
+        <association property="user" javaType="User">
+            <!-- 此处不太理解column和property分别代表哪个字段 -->
+            <id column="user_id" property="id"/>
+            <result column="username" property="username"/>
+        </association>
+    </resultMap>
 
+    <select id="selectOrdersOfUser" resultMap="orders">
+        select o.id, o.user_id, o.number,o.createtime, u.username
+        from orders o
+        left join user u
+        on u.id = o.user_id;
+    </select>
+
+
+    <resultMap id="userAndOrder" type="User">
+        <id column="user_id" property="id"/>
+        <result column="username" property="username"/>
+        <collection property="orders" ofType="Orders">
+            <id column="id" property="id"/>
+            <result column="number" property="number"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectUserAndOrders" resultMap="userAndOrder">
+        select o.id, o.user_id, o.number,o.createtime, u.username
+        from user u
+        left join orders o
+        on u.id = o.user_id;
+    </select>
 </mapper>

@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -169,6 +170,58 @@ public class MapperTest {
             System.out.println(u);
         }
     }
+
+    //根据多个id查询用户信息
+    @Test
+    public void selectUserByIds() throws IOException {
+
+        SqlSession sqlSession = sessionFactory.openSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        List<Integer> ids = new ArrayList<>();
+        ids.add(16);
+        ids.add(22);
+        ids.add(24);
+
+      /* Integer[] ids = new Integer[3];
+       ids[0] = 16;
+       ids[1] = 22;
+       ids[2] = 24;*/
+
+
+//        QueryVo vo = new QueryVo();
+//        vo.setIdList(ids);
+        List<User> userList = mapper.selectUserByIds(ids);
+        for (User user : userList) {
+            System.out.println(user);
+        }
+    }
+
+    //查询所有订单信息，关联查询下单用户信息
+    @Test
+    public void selectOrdersOfUser() throws IOException {
+
+        SqlSession sqlSession = sessionFactory.openSession();
+        OrdersMapper ordersMapper = sqlSession.getMapper(OrdersMapper.class);
+        List<Orders> orders = ordersMapper.selectOrdersOfUser();
+        for (Orders o : orders) {
+            System.out.println(o);
+        }
+    }
+
+    //查询所有用户信息及用户关联的订单信息。
+    @Test
+    public void selectUserAndOrders() throws IOException {
+
+        SqlSession sqlSession = sessionFactory.openSession();
+        OrdersMapper ordersMapper = sqlSession.getMapper(OrdersMapper.class);
+        List<User> users = ordersMapper.selectUserAndOrders();
+
+        for (User u : users) {
+            System.out.println(u);
+        }
+    }
+
 
 
 }

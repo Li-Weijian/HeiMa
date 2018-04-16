@@ -38,4 +38,16 @@ public interface UserMapper {
     //根据性别和名字查询用户
     public List<User> selectUserBySexAndUsername(User user);
     public List<User> selectUserBySexAndUsername(QueryVo vo);
+
+    //根据多个id查询用户信息
+    public List<User> selectUserByIds(Integer[] ids);
+    public List<User> selectUserByIds(List<Integer> idList);
+    public List<User> selectUserByIds(QueryVo vo);
+
+
+
+
+
+
+
 }

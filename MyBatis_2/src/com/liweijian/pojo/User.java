@@ -2,6 +2,7 @@ package com.liweijian.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class User implements Serializable {
 	/**
@@ -14,8 +15,18 @@ public class User implements Serializable {
 	private Date birthday;// 生日
 	private String address;// 地址
 
+    private List<Orders> orders;
 
-	public Integer getId() {
+
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Orders> orders) {
+        this.orders = orders;
+    }
+
+    public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {

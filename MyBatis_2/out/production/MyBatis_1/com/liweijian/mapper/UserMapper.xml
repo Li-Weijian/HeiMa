@@ -42,7 +42,9 @@
 
     <select id="selectUserBySexAndUsername" resultType="User" parameterType="user">
         select * from user
+--         where标签可以自动添加where，同时会处理sql的第一个and关键字
         <where>
+--             test中为什么是username而不是#{username}？？难道不是从user对象中取出来的吗
             <if test="username != null and username != ''">
                 username = #{username}
             </if>
@@ -50,6 +52,16 @@
                 and sex = #{sex}
             </if>
         </where>
-
     </select>
+
+    <select id="selectUserByIds" resultType="User" parameterType="QueryVo">
+        select * from user
+        where id in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </select>
+
+
+
 </mapper>
