@@ -6,7 +6,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.4.4.min.js"></script>
 <title>查询商品列表</title>
+	<script type="text/javascript">
+		var params = '{"id": 1,"name": "测试商品","price": 99.9,"detail": "测试商品描述","pic": "123456.jpg"}';
+
+        $(function () {
+		    $.ajax({
+                url : "${pageContext.request.contextPath }/testJson.action",
+                data : params,
+                contentType : "application/json;charset=UTF-8",//发送数据的格式
+                type : "post",
+                dataType : "json",//回调
+                success : function(data){
+                    alert(data.name);
+                }
+			})
+        });
+	</script>
 </head>
 <body> 
 <%--<form action="${pageContext.request.contextPath }/item/queryitem.action" method="post">--%>

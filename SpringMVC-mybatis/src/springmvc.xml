@@ -48,4 +48,16 @@
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="5000000"/>
     </bean>
+
+    <!-- 定义拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.liweijian.controller.interceptor.Interceptor1"/>
+        </mvc:interceptor>
+       <!-- <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.liweijian.controller.interceptor.Interceptor2"/>
+        </mvc:interceptor>-->
+    </mvc:interceptors>
 </beans>

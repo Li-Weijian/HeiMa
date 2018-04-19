@@ -8,10 +8,14 @@ import com.liweijian.service.ItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -91,5 +95,24 @@ public class ItemController {
         return modelAndView;
     }
 
+    /**
+     * 测试json数据交互
+     * */
+    @RequestMapping("/testJson.action")
+    public @ResponseBody Items testJson(@RequestBody Items items){
+        return items;
+    }
+
+    //去登陆的页面
+    @RequestMapping(value = "/login.action",method = RequestMethod.GET)
+    public String login(){
+        return "login";
+    }
+    @RequestMapping(value = "/login.action",method = RequestMethod.POST)
+    public String login(String username
+            ,HttpSession httpSession){
+        httpSession.setAttribute("username", username);
+        return "redirect:/itemList.action";
+    }
 
 }
