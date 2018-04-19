@@ -1,6 +1,7 @@
 package com.liweijian.controller;
 
 
+import com.liweijian.controller.exception.MesException;
 import com.liweijian.pojo.Items;
 import com.liweijian.pojo.QueryVo;
 import com.liweijian.service.ItemsService;
@@ -8,11 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 public class ItemController {
@@ -21,9 +26,14 @@ public class ItemController {
     private ItemsService itemsService;
 
     @RequestMapping("/itemList.action")
-    public ModelAndView selectItemList(){
+    public ModelAndView selectItemList() throws MesException {
 
         List<Items> list = itemsService.selectItemsList();
+//        Integer i = 1 / 0;
+//        if (null == null){
+//            产生已知异常
+//            throw new MesException("已知错误！");
+//        }
 
         /*// 创建页面需要显示的商品数据
         List<Items> list = new ArrayList<>();
@@ -54,10 +64,28 @@ public class ItemController {
 
     @RequestMapping("/updateitem.action")
 //    public ModelAndView updateItem(Items items, Model model){
-    public ModelAndView updateItem(QueryVo vo){
+    public String updateItem(QueryVo vo, MultipartFile pictureFile) throws IOException {
+
+        //生成文件名
+        String picName = UUID.randomUUID().toString();
+        //获取文件名
+        String filename = pictureFile.getOriginalFilename();
+        //后缀名
+        String extName = filename.substring(filename.lastIndexOf("."));
+        pictureFile.transferTo(new File("F:\\Code\\upload\\" + picName+ extName));
+        vo.getItems().setPic(picName+extName);
+
+        itemsService.updateItem(vo.getItems());
+        return "forward:/itemEdit.action?id="+vo.getItems().getId();  //重定向
+    }
+
+    //测试绑定数组。可以直接写在包装类里，也可以写在形参上
+    @RequestMapping("/deleteitem.action")
+//    public ModelAndView updateItem(Items items, Model model){
+    public ModelAndView deleteItem(QueryVo vo){
 
         ModelAndView modelAndView = new ModelAndView();
-        itemsService.updateItem(vo.getItems());
+        System.out.println(vo.getIds());
 
         modelAndView.setViewName("itemList"); //转跳路径
         return modelAndView;

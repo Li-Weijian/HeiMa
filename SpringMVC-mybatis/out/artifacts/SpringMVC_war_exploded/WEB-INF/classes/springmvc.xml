@@ -32,13 +32,20 @@
         </property>
     </bean>
 
-
-
     <!-- 配置视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 配置前缀 -->
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <!-- 配置后缀 -->
         <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 配置全局异常处理器 -->
+    <bean id="customerHandlerException" class="com.liweijian.controller.exception.CustomerHandlerException"/>
+
+    <!-- 配置文件上传 -->
+    <!--id名字必须为multipartResolver-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="5000000"/>
     </bean>
 </beans>
