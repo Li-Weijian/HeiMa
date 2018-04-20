@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liweijian.crm.dao.CustomerDao">
+
+    <select id="selectPageByQueryVo" parameterType="QueryVo" resultType="Customer">
+        select * from customer
+        <where>
+            <if test="custName != null and custName != ''">
+                cust_name like "%"#{custName}"%"
+            </if>
+            <if test="custSource != null and custSource != ''">
+               and cust_source = #{custSource}
+            </if>
+            <if test="custIndustry != null and custIndustry != ''">
+                and cust_industry = #{custIndustry}
+            </if>
+            <if test="custLevel != null and custLevel != ''">
+                and cust_level = #{custLevel}
+            </if>
+        </where>
+        limit #{startRow},#{size}
+    </select>
+
+    <!-- 查询总记录数 -->
+    <select id="customerCount" resultType="Integer" parameterType="QueryVo">
+        select count(*) from customer
+        <where>
+            <if test="custName != null and custName != ''">
+                cust_name like "%"#{custName}"%"
+            </if>
+            <if test="custSource != null and custSource != ''">
+                and cust_source = #{custSource}
+            </if>
+            <if test="custIndustry != null and custIndustry != ''">
+                and cust_industry = #{custIndustry}
+            </if>
+            <if test="custLevel != null and custLevel != ''">
+                and cust_level = #{custLevel}
+            </if>
+        </where>
+    </select>
+    
+
+</mapper>
+
