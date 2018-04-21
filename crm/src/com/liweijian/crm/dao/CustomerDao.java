@@ -18,4 +18,20 @@ public interface CustomerDao {
      * */
     public Integer customerCount(QueryVo vo);
 
+
+    /**
+     * 根据id查询客户
+     * */
+    public Customer selectCustomerById(String id);
+
+    /**
+     * 更新客户
+     * */
+    public void updateCustomerById(Customer customer);
+
+    /**
+     * 删除客户
+     * */
+    public void deleteCustomerById(Integer id);
+
 }

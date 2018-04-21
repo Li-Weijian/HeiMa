@@ -409,7 +409,7 @@
 		function editCustomer(id) {
 			$.ajax({
 				type:"get",
-				url:"&lt;%=basePath%>customer/edit.action",
+				url:"/customer/edit.action",
 				data:{"id":id},
 				success:function(data) {
 					$("#edit_cust_id").val(data.cust_id);
@@ -427,7 +427,7 @@
 			});
 		}
 		function updateCustomer() {
-			$.post("&lt;%basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){
+			$.post("/customer/update.action",$("#edit_customer_form").serialize(),function(data){
 				alert("客户信息更新成功！");
 				window.location.reload();
 			});
@@ -435,7 +435,7 @@
 		
 		function deleteCustomer(id) {
 			if(confirm('确实要删除该客户吗?')) {
-				$.post("&lt;%basePath%>customer/delete.action",{"id":id},function(data){
+				$.post("/customer/delete.action",{"id":id},function(data){
 					alert("客户删除更新成功！");
 					window.location.reload();
 				});

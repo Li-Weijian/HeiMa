@@ -42,6 +42,21 @@
         </where>
     </select>
     
+    <select id="selectCustomerById" parameterType="String" resultType="Customer">
+        select * from customer where cust_id = #{id}
+    </select>
+
+    <update id="updateCustomerById" parameterType="Customer">
+        update customer set cust_name = #{cust_name}
+        <where>
+            cust_id = #{cust_id}
+        </where>
+    </update>
+
+    <delete id="deleteCustomerById" parameterType="Integer">
+        delete from customer where cust_id = #{value}
+    </delete>
+    
 
 </mapper>
 

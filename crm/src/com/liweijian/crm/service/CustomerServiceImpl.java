@@ -48,4 +48,21 @@ public class CustomerServiceImpl implements CustomerService {
 
         return page;
     }
+
+    @Override
+    public Customer selectCustomerById(String id) {
+        return customerDao.selectCustomerById(id);
+    }
+
+    @Override
+    public void updateCustomerById(Customer customer) {
+        customerDao.updateCustomerById(customer);
+    }
+
+    @Override
+    public void deleteCustomerById(Integer id) {
+        customerDao.deleteCustomerById(id);
+    }
+
+
 }
