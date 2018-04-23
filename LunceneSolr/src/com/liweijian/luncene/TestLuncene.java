@@ -13,6 +13,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 import org.junit.Test;
+import org.wltea.analyzer.lucene.IKAnalyzer;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,8 +27,8 @@ public class TestLuncene {
 //      1）指定索引库的存放位置Directory对象
         Directory directory = FSDirectory.open(new File("F:\\Code\\HeiMa\\LunceneSolr\\temp\\index"));
 //      2）指定一个分析器，对文档内容进行分析。
-        Analyzer analyzer = new StandardAnalyzer();
-
+//        Analyzer analyzer = new StandardAnalyzer();
+        Analyzer analyzer = new IKAnalyzer();
         IndexWriterConfig config = new IndexWriterConfig(Version.LATEST,analyzer);
         IndexWriter indexWriter = new IndexWriter(directory,config);
 

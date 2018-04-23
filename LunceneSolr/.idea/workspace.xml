@@ -11,12 +11,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="TestLuncene.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TestLuncene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liweijian/luncene/TestLuncene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+            <state relative-caret-position="25">
+              <caret line="76" column="67" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestLunceneManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/liweijian/luncene/TestLunceneManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,6 +49,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/liweijian/luncene/TestLuncene.java" />
+        <option value="$PROJECT_DIR$/src/com/liweijian/luncene/TestLunceneManager.java" />
       </list>
     </option>
   </component>
@@ -49,23 +62,28 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="95" />
-    <option name="y" value="15" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="56" />
     <option name="width" value="1750" />
-    <option name="height" value="1030" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="LunceneSolr" type="b2602c69:ProjectViewProjectNode" />
               <item name="LunceneSolr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LunceneSolr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LunceneSolr" type="462c0819:PsiDirectoryNode" />
+              <item name="searchsource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LunceneSolr" type="b2602c69:ProjectViewProjectNode" />
@@ -78,13 +96,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="luncene" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="LunceneSolr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LunceneSolr" type="462c0819:PsiDirectoryNode" />
+              <item name="temp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LunceneSolr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LunceneSolr" type="462c0819:PsiDirectoryNode" />
+              <item name="temp" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -94,12 +122,16 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Code\HeiMa\LunceneSolr\src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Code\HeiMa\LunceneSolr\src" />
       <recent name="F:\Code\HeiMa\LunceneSolr\src\lib" />
     </key>
   </component>
@@ -115,11 +147,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestLuncene.testSerachIndex">
+  <component name="RunManager" selected="JUnit.TestLunceneManager.testBooleanQuery">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="TestLuncene.testCreateIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLunceneManager.testBooleanQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LunceneSolr" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +162,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.liweijian.luncene" />
-      <option name="MAIN_CLASS_NAME" value="com.liweijian.luncene.TestLuncene" />
-      <option name="METHOD_NAME" value="testCreateIndex" />
+      <option name="MAIN_CLASS_NAME" value="com.liweijian.luncene.TestLunceneManager" />
+      <option name="METHOD_NAME" value="testBooleanQuery" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -142,7 +174,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TestLuncene.testSerachIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLunceneManager.testMatchAllDocsQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LunceneSolr" />
       <extension name="coverage">
         <pattern>
@@ -153,8 +185,77 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.liweijian.luncene" />
-      <option name="MAIN_CLASS_NAME" value="com.liweijian.luncene.TestLuncene" />
-      <option name="METHOD_NAME" value="testSerachIndex" />
+      <option name="MAIN_CLASS_NAME" value="com.liweijian.luncene.TestLunceneManager" />
+      <option name="METHOD_NAME" value="testMatchAllDocsQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestLunceneManager.testNumericRangeQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LunceneSolr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liweijian.luncene.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.liweijian.luncene" />
+      <option name="MAIN_CLASS_NAME" value="com.liweijian.luncene.TestLunceneManager" />
+      <option name="METHOD_NAME" value="testNumericRangeQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestLunceneManager.testTermQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LunceneSolr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liweijian.luncene.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.liweijian.luncene" />
+      <option name="MAIN_CLASS_NAME" value="com.liweijian.luncene.TestLunceneManager" />
+      <option name="METHOD_NAME" value="testTermQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestLunceneManager.testUpdateIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LunceneSolr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liweijian.luncene.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.liweijian.luncene" />
+      <option name="MAIN_CLASS_NAME" value="com.liweijian.luncene.TestLunceneManager" />
+      <option name="METHOD_NAME" value="testUpdateIndex" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -204,13 +305,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestLuncene.testCreateIndex" />
-      <item itemvalue="JUnit.TestLuncene.testSerachIndex" />
+      <item itemvalue="JUnit.TestLunceneManager.testUpdateIndex" />
+      <item itemvalue="JUnit.TestLunceneManager.testMatchAllDocsQuery" />
+      <item itemvalue="JUnit.TestLunceneManager.testTermQuery" />
+      <item itemvalue="JUnit.TestLunceneManager.testNumericRangeQuery" />
+      <item itemvalue="JUnit.TestLunceneManager.testBooleanQuery" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestLuncene.testSerachIndex" />
-        <item itemvalue="JUnit.TestLuncene.testCreateIndex" />
+        <item itemvalue="JUnit.TestLunceneManager.testBooleanQuery" />
+        <item itemvalue="JUnit.TestLunceneManager.testNumericRangeQuery" />
+        <item itemvalue="JUnit.TestLunceneManager.testTermQuery" />
+        <item itemvalue="JUnit.TestLunceneManager.testMatchAllDocsQuery" />
+        <item itemvalue="JUnit.TestLunceneManager.testUpdateIndex" />
       </list>
     </recent_temporary>
   </component>
@@ -224,53 +331,79 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524362374306</updated>
-      <workItem from="1524362375922" duration="4157000" />
+      <workItem from="1524362375922" duration="7225000" />
+      <workItem from="1524443906969" duration="2017000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestLuncene_testCreateIndex - 2018.04.22 at 10h 36m 13s.xml">
+    <history-entry file="TestLunceneManager_testDeleteAll - 2018.04.22 at 12h 17m 27s.xml">
+      <configuration name="TestLunceneManager.testDeleteAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLuncene_testCreateIndex - 2018.04.22 at 12h 19m 44s.xml">
       <configuration name="TestLuncene.testCreateIndex" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestLuncene_testSerachIndex - 2018.04.22 at 11h 04m 40s.xml">
+    <history-entry file="TestLunceneManager_testDeleteIndexByQuery - 2018.04.22 at 12h 19m 50s.xml">
+      <configuration name="TestLunceneManager.testDeleteIndexByQuery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLuncene_testSerachIndex - 2018.04.22 at 12h 19m 59s.xml">
       <configuration name="TestLuncene.testSerachIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLunceneManager_testUpdateIndex - 2018.04.22 at 12h 27m 18s.xml">
+      <configuration name="TestLunceneManager.testUpdateIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLunceneManager_testUpdateIndex - 2018.04.22 at 12h 31m 35s.xml">
+      <configuration name="TestLunceneManager.testUpdateIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLunceneManager_testMatchAllDocsQuery - 2018.04.23 at 08h 56m 37s.xml">
+      <configuration name="TestLunceneManager.testMatchAllDocsQuery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLunceneManager_testMatchAllDocsQuery - 2018.04.23 at 08h 58m 44s.xml">
+      <configuration name="TestLunceneManager.testMatchAllDocsQuery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLunceneManager_testTermQuery - 2018.04.23 at 09h 02m 49s.xml">
+      <configuration name="TestLunceneManager.testTermQuery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLunceneManager_testNumericRangeQuery - 2018.04.23 at 09h 08m 15s.xml">
+      <configuration name="TestLunceneManager.testNumericRangeQuery" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4157000" />
+    <option name="totallyTimeSpent" value="9242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.303268" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32941177" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41568628" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18684895" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29150328" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="7" weight="0.32941177" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +412,32 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/liweijian/luncene/TestLuncene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="76" column="67" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liweijian/luncene/TestLunceneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/src/lib/lucene-core-4.10.3.jar!/org/apache/lucene/index/IndexWriterConfig.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225">
@@ -294,10 +452,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IKAnalyzer.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liweijian/luncene/TestLuncene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+        <state relative-caret-position="25">
+          <caret line="76" column="67" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liweijian/luncene/TestLunceneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
